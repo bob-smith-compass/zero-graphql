@@ -1,3 +1,8 @@
+# Install babel-node
+
+`sudo npm install --save-dev @babel/core @babel/node`
+
+
 # zero-to-graphql
 
 In this repository, you will find examples of GraphQL endpoints created using various languages atop different frameworks. The goal is to demonstrate how you might go about creating a GraphQL endpoint atop your *existing* infrastructure, whatever that may be, without having to rewrite your data model.

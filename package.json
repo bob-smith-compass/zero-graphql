@@ -1,0 +1,37 @@
+{
+  "name": "zero-to-graphql",
+  "version": "1.0.0",
+  "description": "In this repository, you will find examples of GraphQL endpoints created using various languages atop different frameworks. The goal is to demonstrate how you might go about creating a GraphQL endpoint atop your *existing* infrastructure, whatever that may be, without having to rewrite your data model.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node --presets es2015,stage-0 -- index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steveluscher/zero-to-graphql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steveluscher/zero-to-graphql/issues"
+  },
+  "homepage": "https://github.com/steveluscher/zero-to-graphql#readme",
+  "dependencies": {
+    "babel-cli": "6.7.5",
+    "babel-preset-es2015": "6.6.0",
+    "babel-preset-stage-0": "6.5.0",
+    "dataloader": "1.2.0",
+    "express": "4.13.4",
+    "express-graphql": "0.5.1",
+    "graphql": "0.5.0",
+    "graphql-relay": "0.4.0",
+    "node-fetch": "^2.3.0",
+    "nodemon": "1.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2"
+  }
+}

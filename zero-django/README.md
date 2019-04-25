@@ -22,7 +22,7 @@
 ## Installation
 
     cd zero-django
-    pip install -r requirements.txt
+    sudo pip install -r requirements.txt
 
 ## Running the example
 
