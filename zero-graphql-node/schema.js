@@ -1,7 +1,49 @@
+import {
+  GraphQLSchema,
+  GraphQLObjectType,
+  GraphQLString
 
+} from 'graphql';
 
+import fetch from 'node-fetch';
 
+const BASE_URL = 'https://restcountries.eu/rest/v2/';
 
+const CountryType = new GraphQLObjectType({
+  name: 'country',
+  description: '...',
+
+  fields: ({
+    name: {
+      type: GraphQLString,
+      resolve: country => country.name
+    }
+  })
+
+})
+
+const QueryType = new GraphQLObjectType({
+  name: 'Query',
+  description: '...',
+
+  fields: () => ({
+    country: {
+      type: CountryType,
+      args: {
+        id: {
+          type: GraphQLString
+        }
+      },
+      resolve: (root, args) => fetch(`${BASE_URL}`)
+        .then(res => res.json())
+        .then(json => json.country)
+    }
+  })
+})
+
+export default new GraphQLSchema({
+  quury: QueryType,
+})
 
 
 
